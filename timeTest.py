@@ -20,6 +20,29 @@ def testBubbleSortHours():
 def testBubbleSortPays():
   data= csvFunctions.readCSV()
   start_time = time.time()
-  functions.bubbleSortHours(data)
+  functions.bubbleSortPays(data)
   print("--- {} seconds ---".format(time.time()- start_time)) 
   csvFunctions.exportCSV(data, "BubbleSortPays.csv")
+
+# quick sort tests
+
+def testQuickSortAlpha():
+  data= csvFunctions.readCSV()
+  start_time = time.time()
+  functions.quickSortAlpha(data)
+  print("--- {} seconds ---".format(time.time() - start_time)) 
+  csvFunctions.exportCSV(data, "quickSortAlpha.csv")
+
+def testQuickSortHours():
+  data= csvFunctions.readCSV()
+  start_time = time.time()
+  functions.quickSortHours(data)
+  print("--- {} seconds ---".format(time.time() - start_time)) 
+  csvFunctions.exportCSV(data, "quickSortHours.csv")
+
+def testQuickSortPays():
+  data= csvFunctions.readCSV()
+  start_time = time.time()
+  functions.quickSortPays(data)
+  print("--- {} seconds ---".format(time.time() - start_time)) 
+  csvFunctions.exportCSV(data, "quickSortPays.csv")

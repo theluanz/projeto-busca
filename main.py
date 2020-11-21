@@ -6,3 +6,8 @@ timeTest.testBubbleSortHours()
 
 timeTest.testBubbleSortPays()
 
+timeTest.testQuickSortAlpha()
+
+timeTest.testQuickSortHours()
+
+timeTest.testQuickSortPays()
