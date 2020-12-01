@@ -16,4 +16,17 @@ def exportCSV(data, fileName="default.csv"):
     for x in data:
       writer.writerow(x)
 
+def latexExportVars(alfaBubble,horasBubble, pagosBubble, alfaQuick, horasQuick, pagosQuick,mediaBubble=0, mediaQuick=0):
+  mediaBubble=(alfaBubble+horasBubble+ pagosBubble)/3
+  mediaQuick=(alfaQuick+horasQuick+ pagosQuick)/3
   
+  with open("./relatorio-latex/times.sty", mode='w') as writer:
+    writer.writelines("\\newcommand\\alfaBubble{"+str(alfaBubble)+"}\n")
+    writer.writelines("\\newcommand\\horasBubble{"+ str(horasBubble) + "}\n")
+    writer.writelines("\\newcommand\\pagosBubble{"+str(pagosBubble)+ "}\n")
+    writer.writelines("\\newcommand\\mediaBubble{"+ str(mediaBubble) +"}\n")
+    writer.writelines("\\newcommand\\alfaQuick{" +str(alfaQuick)+"}\n")
+    writer.writelines("\\newcommand\\horasQuick{"+ str(horasQuick)+ "}\n")
+    writer.writelines("\\newcommand\\pagosQuick{"+str(pagosQuick)+"}\n")
+    writer.writelines("\\newcommand\\mediaQuick{"+str(mediaQuick)+"}\n")
+
